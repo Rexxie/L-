@@ -16,7 +16,7 @@ namespace RexxieAIO
             switch (ObjectManager.Player.ChampionName.ToLowerInvariant())
             {
                 case "ahri":
-                    new Ahri();
+                    new Plugins.Ahri();
                     Game.PrintChat("RexxieAIO - Ahri : Loaded!");
                     break;
 

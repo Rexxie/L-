@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 using LeagueSharp;
 using LeagueSharp.Common;
 
-
-namespace RexxieAIO
+namespace RexxieAIO.Plugins
 {
     class Ahri
     {
@@ -202,7 +201,7 @@ namespace RexxieAIO
                 if (Config.Item("UseWCombo").GetValue<bool>())
                     CastSpell(W, target);
             }
-            
+
             if (Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.LaneClear || Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.Mixed)
             {
                 if (Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.LaneClear)
@@ -236,7 +235,7 @@ namespace RexxieAIO
                         CastSpell(W, target);
                 }
             }
-            
+
             if (Config.Item("KS").GetValue<bool>())
             {
                 foreach (var target in ObjectManager.Get<Obj_AI_Hero>().Where(target => target.Team != Hero.Team &&
@@ -261,9 +260,9 @@ namespace RexxieAIO
                         R.Cast(direction);
 
                     if (Config.Item("KSr").GetValue<bool>() && RDMG * R.Instance.Ammo + 10 > health)
-                        CastSpell(R, target);           
+                        CastSpell(R, target);
                 }
-            }        
+            }
         }
 
         private static void CastSpell(Spell spell, Obj_AI_Base hero)
