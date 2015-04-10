@@ -20,6 +20,10 @@ namespace RexxieAIO
                     Game.PrintChat("RexxieAIO - Ahri : Loaded!");
                     break;
 
+                case "malzahar":
+                    new Plugins.Malzahar();
+                    Game.PrintChat("RexxieAIO - Malzahar : Loaded!");
+                    break;
                 default:
                     Game.PrintChat("RexxieAIO - Champion not Supported!");
                     break;
